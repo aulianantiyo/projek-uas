@@ -1,0 +1,6 @@
+city,temperature,feels_like,humidity,description,timestamp
+Jakarta,30.96,37.19,69,moderate rain,2024-12-05 08:13:20
+Surabaya,31.68,38.68,73,moderate rain,2024-12-05 08:13:20
+Bandung,26.1,26.1,99,overcast clouds,2024-12-05 08:13:20
+Medan,31.02,37.65,70,scattered clouds,2024-12-05 08:13:20
+Semarang,31.96,38.89,66,few clouds,2024-12-05 08:13:20
