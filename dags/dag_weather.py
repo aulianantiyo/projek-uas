@@ -101,10 +101,3 @@ with DAG(
 
     # Menentukan urutan task
     is_api_available >> extract_weather_tasks >> process_weather_data
-
-# Catatan Penting:
-# 1. Anda perlu membuat connection di Airflow dengan ID 'openweathermap_api'
-#    dengan base URL: https://api.openweathermap.org
-# 2. Tambahkan variabel 'openweathermap_api_key' di Airflow Variables
-#    dengan API key Anda dari OpenWeatherMap
-# 3. Pastikan Anda telah menginstal provider HTTP dan pandas di Airflow
