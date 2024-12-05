@@ -1,0 +1,31 @@
+[2024-12-05T05:48:51.070+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-05T05:48:51.403+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: openweathermap_weather_dag.extract_weather_medan manual__2024-12-05T05:48:26.952640+00:00 [queued]>
+[2024-12-05T05:48:51.440+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: openweathermap_weather_dag.extract_weather_medan manual__2024-12-05T05:48:26.952640+00:00 [queued]>
+[2024-12-05T05:48:51.440+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 3
+[2024-12-05T05:48:51.481+0000] {taskinstance.py:2889} INFO - Executing <Task(SimpleHttpOperator): extract_weather_medan> on 2024-12-05 05:48:26.952640+00:00
+[2024-12-05T05:48:51.505+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=155) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-05T05:48:51.508+0000] {standard_task_runner.py:72} INFO - Started process 184 to run task
+[2024-12-05T05:48:51.510+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'openweathermap_weather_dag', 'extract_weather_medan', 'manual__2024-12-05T05:48:26.952640+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/dag_weather.py', '--cfg-path', '/tmp/tmp1xrv61gj']
+[2024-12-05T05:48:51.514+0000] {standard_task_runner.py:105} INFO - Job 14: Subtask extract_weather_medan
+[2024-12-05T05:48:51.646+0000] {task_command.py:467} INFO - Running <TaskInstance: openweathermap_weather_dag.extract_weather_medan manual__2024-12-05T05:48:26.952640+00:00 [running]> on host ba3c3d68bfd0
+[2024-12-05T05:48:51.881+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='openweathermap_weather_dag' AIRFLOW_CTX_TASK_ID='extract_weather_medan' AIRFLOW_CTX_EXECUTION_DATE='2024-12-05T05:48:26.952640+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-05T05:48:26.952640+00:00'
+[2024-12-05T05:48:51.888+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-12-05T05:48:51.888+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-12-05T05:48:51.889+0000] {logging_mixin.py:190} INFO - Current task name:extract_weather_medan state:running start_date:2024-12-05 05:48:51.403870+00:00
+[2024-12-05T05:48:51.890+0000] {logging_mixin.py:190} INFO - Dag name:openweathermap_weather_dag and current dag run status:running
+[2024-12-05T05:48:51.890+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-05T05:48:51.891+0000] {http.py:173} INFO - Calling HTTP method
+[2024-12-05T05:48:51.930+0000] {base.py:84} INFO - Retrieving connection 'openweathermap_api'
+[2024-12-05T05:48:51.954+0000] {base.py:84} INFO - Retrieving connection 'openweathermap_api'
+[2024-12-05T05:48:52.727+0000] {http.py:222} INFO - {"coord":{"lon":98.6667,"lat":3.5833},"weather":[{"id":802,"main":"Clouds","description":"scattered clouds","icon":"03d"}],"base":"stations","main":{"temp":32.02,"feels_like":34.64,"temp_min":32.02,"temp_max":32.02,"pressure":1007,"humidity":51,"sea_level":1007,"grnd_level":1002},"visibility":10000,"wind":{"speed":1.03,"deg":230},"clouds":{"all":40},"dt":1733377620,"sys":{"type":1,"id":9412,"country":"ID","sunrise":1733354308,"sunset":1733397230},"timezone":25200,"id":1214520,"name":"Medan","cod":200}
+[2024-12-05T05:48:52.825+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-05T05:48:52.827+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=openweathermap_weather_dag, task_id=extract_weather_medan, run_id=manual__2024-12-05T05:48:26.952640+00:00, execution_date=20241205T054826, start_date=20241205T054851, end_date=20241205T054852
+[2024-12-05T05:48:52.870+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-12-05T05:48:52.870+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-12-05T05:48:52.871+0000] {logging_mixin.py:190} INFO - Dag name:openweathermap_weather_dag queued_at:2024-12-05 05:48:27.040265+00:00
+[2024-12-05T05:48:52.872+0000] {logging_mixin.py:190} INFO - Task hostname:ba3c3d68bfd0 operator:SimpleHttpOperator
+[2024-12-05T05:48:52.909+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-05T05:48:52.961+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-05T05:48:52.963+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
